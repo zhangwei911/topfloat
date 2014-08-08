@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
+        android:id="@+id/textview"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="@string/video_local"
+        android:id="@+id/button"
+        android:layout_gravity="left|center_vertical"
+        android:layout_below="@+id/textview"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="@string/getUrl"
+        android:id="@+id/button2"
+        android:layout_gravity="left|center_vertical"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/button"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/url_editText"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/button2"
+        android:layout_toLeftOf="@+id/go_button"
+        android:singleLine="true"
+        android:hint="请添加http://"
+        android:text="@string/youku" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:id="@+id/go_button"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentRight="true"
+        android:text="@string/go"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginRight="5dp" />
+
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/webView"
+            android:keepScreenOn="true"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true" />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView1"
+        android:visibility="gone" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/player"
+        android:id="@+id/float_button"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:background="@drawable/buttonstyle"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:id="@+id/progressBar"
+        android:layout_alignTop="@+id/webView"
+        android:background="#6dcfff"
+        android:layout_marginTop="-3dp"
+        android:progressDrawable="@drawable/myprogress_style" />
+
+
+</RelativeLayout>

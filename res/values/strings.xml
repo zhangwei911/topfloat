@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, TopFloatMain!</string>
+    <string name="app_name">TopFloat</string>
+    <string name="fileExplorer">文件浏览器</string>
+    <string name="fileexplorer">New Button</string>
+    <string name="home">点击了Home按钮！</string>
+    <string name="share">分享</string>
+    <string name="rename">重 命 名</string>
+    <string name="cancel">取    消</string>
+    <string name="save">保存</string>
+    <string name="saveTo">文件保存到</string>
+    <string name="go">Go</string>
+    <string name="httphead">请添加http://</string>
+    <string name="youku">http://v.youku.com</string>
+    <string name="h">当前屏幕为横屏</string>
+    <string name="v">当前屏幕为竖屏</string>
+    <string name="floatbutton">浮</string>
+    <string name="fullbutton">全</string>
+    <string name="utf">utf-8</string>
+    <string name="set_desc">没有连接网络，请设置！</string>
+    <string name="network_set">设置网络</string>
+    <string name="nonetwork">离线</string>
+    <string name="selectOne">已选中1个</string>
+    <string name="selected">已选中</string>
+    <string name="ge">个</string>
+    <string name="multselect">多选</string>
+    <string name="getroot">获取Root权限</string>
+    <string name="havegetroot">已获取Root权限</string>
+    <string name="menu">菜单</string>
+    <string name="listname">列表</string>
+    <string name="gridname">图表</string>
+    <string name="hide">隐</string>
+    <string name="show">显</string>
+    <string name="ExceptionExit">文件异常导致退出</string>
+    <string name="video_local">本地视频</string>
+    <string name="file_deleted">文件已删除！</string>
+    <string name="delete">删除</string>
+    <string name="deleteenter">删除文件？</string>
+    <string name="deleteenterdesc">确定要删除这个文件吗？</string>
+    <string name="dontdelete">不删了</string>
+    <string name="player">播 放 器</string>
+    <string name="getUrl">播放</string>
+    <string name="exit">  退      出  </string>
+    <string name="onPrepare">准备下载。。。</string>
+    <string name="onDownload">下载中。。。</string>
+    <string name="bytestring">字节</string>
+    <string name="onpreinstall">准备安装。。。.</string>
+    <string name="oninstalled">安装完成, ret = </string>
+    <string name="di">第</string>
+    <string name="part">部分</string>
+    <string name="playfinish">播放结束！</string>
+    <string name="seturl">设置URL</string>
+    <string name="url">URL:</string>
+
+
+    <string-array name="charset">
+        <item>utf-8</item>
+        <item>GBK</item>
+        <item>GB2312</item>
+        <item>GB18030</item>
+        <item>BIG5</item>
+        <item>US-ASCII</item>
+        <item>ISO-8859-1</item>
+        <item>UTF-16BE</item>
+        <item>UTF-16LE</item>
+        <item>UTF-16</item>
+        <item>UCS-2</item>
+        <item>UCS-4</item>
+    </string-array>
+</resources>

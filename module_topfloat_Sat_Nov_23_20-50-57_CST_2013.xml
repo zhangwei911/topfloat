@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_topfloat" default="compile.module.topfloat">
+  <dirname property="module.topfloat.basedir" file="${ant.file.module_topfloat}"/>
+  
+  <property name="module.jdk.home.topfloat" value="${jdk.home.android_sdk}"/>
+  <property name="module.jdk.bin.topfloat" value="${jdk.bin.android_sdk}"/>
+  <property name="module.jdk.classpath.topfloat" value="jdk.classpath.android_sdk"/>
+  
+  <property name="compiler.args.topfloat" value="${compiler.args}"/>
+  
+  <property name="topfloat.output.dir" value="${module.topfloat.basedir}/../../Android_workspace-eclipse2/MM/out/production/TopFloat"/>
+  <property name="topfloat.testoutput.dir" value="${module.topfloat.basedir}/../../Android_workspace-eclipse2/MM/out/test/TopFloat"/>
+  
+  <path id="topfloat.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="topfloat.module.production.classpath">
+    <path refid="${module.jdk.classpath.topfloat}"/>
+  </path>
+  
+  <path id="topfloat.runtime.production.module.classpath">
+    <pathelement location="${topfloat.output.dir}"/>
+  </path>
+  
+  <path id="topfloat.module.classpath">
+    <path refid="${module.jdk.classpath.topfloat}"/>
+    <pathelement location="${topfloat.output.dir}"/>
+  </path>
+  
+  <path id="topfloat.runtime.module.classpath">
+    <pathelement location="${topfloat.testoutput.dir}"/>
+    <pathelement location="${topfloat.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.topfloat">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.topfloat">
+    <patternset refid="compiler.excluded"/>
+    <patternset refid="excluded.from.module.topfloat"/>
+  </patternset>
+  
+  <path id="topfloat.module.sourcepath">
+    <dirset dir="${module.topfloat.basedir}">
+      <include name="gen"/>
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.topfloat" depends="compile.module.topfloat.production,compile.module.topfloat.tests" description="Compile module TopFloat"/>
+  
+  <target name="compile.module.topfloat.production" depends="register.custom.compilers" description="Compile module TopFloat; production classes">
+    <mkdir dir="${topfloat.output.dir}"/>
+    <javac2 destdir="${topfloat.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.topfloat}/javac">
+      <compilerarg line="${compiler.args.topfloat}"/>
+      <bootclasspath refid="topfloat.module.bootclasspath"/>
+      <classpath refid="topfloat.module.production.classpath"/>
+      <src refid="topfloat.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.topfloat"/>
+    </javac2>
+    
+    <copy todir="${topfloat.output.dir}">
+      <fileset dir="${module.topfloat.basedir}/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.topfloat"/>
+      </fileset>
+      <fileset dir="${module.topfloat.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.topfloat"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.topfloat.tests" depends="register.custom.compilers,compile.module.topfloat.production" description="compile module TopFloat; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.topfloat" description="cleanup module">
+    <delete dir="${topfloat.output.dir}"/>
+    <delete dir="${topfloat.testoutput.dir}"/>
+  </target>
+</project>

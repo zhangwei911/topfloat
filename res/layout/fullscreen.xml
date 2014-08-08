@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".FullscreenActivity" >
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:clickable="true">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/full_videoView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/name_textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:textColor="#ff7b45"
+        android:background="#9afcff"
+        android:layout_alignParentBottom="true" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/next_full_imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@android:drawable/ic_media_next"
+        android:alpha="0.4"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/redbuttonstyle"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/pre_full_imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/next_full_imageButton"
+        android:src="@android:drawable/ic_media_previous"
+        android:alpha="0.4"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/redbuttonstyle"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="@string/floatbutton"
+        android:id="@+id/fullfloat_button"
+        android:layout_alignTop="@+id/pre_full_imageButton"
+        android:layout_toLeftOf="@+id/pre_full_imageButton"
+        android:alpha="0.5"
+        android:background="@drawable/redbuttonstyle"
+        android:layout_marginLeft="5dp"
+        android:textSize="30dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/full_list_imageButton"
+        android:background="@drawable/redbuttonstyle"
+        android:src="@drawable/list"
+        android:layout_alignTop="@+id/fullfloat_button"
+        android:layout_toLeftOf="@+id/fullfloat_button"
+        android:alpha="0.6"
+        android:scaleType="fitXY" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/full_listView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/fullfloat_button"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
+    </FrameLayout>
